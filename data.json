@@ -1,0 +1,31 @@
+var movies = `[{
+    "movieName": "Free Guy",
+    "image": "./img/IMG_2974.jpeg",
+    "description": "Der Held, der seine Welt rettet...",
+    "likes": 10    
+},{
+    "movieName": "The Starling",
+    "image": "./img/IMG_2976.jpeg",
+    "description": "Eine Tragikkomödie, Schicksalsschlag",
+    "likes": 20    
+},{
+    "movieName": "Cinderella",
+    "image": "./img/IMG_2975.jpeg",
+    "description": "Das Waisenmädchen mit den großen Träumen...",
+    "likes": 30    
+},{
+    "movieName": "Madame Claude",
+    "image": "./img/IMG_2978.jpeg",
+    "description": "Ein Bordell in Paris...",
+    "likes": 40    
+},{
+    "movieName": "Schwarze Adler",
+    "image":"./img/IMG_2979.JPG",
+    "description": "Fussballmanschaft mit schwarzem Adler auf der Brust...",
+    "likes": 50    
+},{
+    "movieName": "Eine Handvoll Worte",
+    "image": "./img/IMG_2980.JPG",
+    "description": "Journalistin Ellie entdeckt alle Briefe im Archiv",
+    "likes": 60    
+}]`
