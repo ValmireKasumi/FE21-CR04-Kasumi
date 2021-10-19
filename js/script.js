@@ -45,13 +45,17 @@ function sortMovies() {
 
 //Tabelle mit Filminformation erstellen - abhängig von der aktuellen Sortierung
 function drawMoviesTable(sort_direction) {
-  if (sort_direction == "down") {
-    moviesParsed.reverse(sortMoviesArray("likes")); //sortiere bei Start absteigend
-  } else {
-    moviesParsed.sort(sortMoviesArray("likes")); //sortiere bei Start absteigend
+  if (sort_direction == "down") { //wenn sort_direction gleich "down" ist
+    moviesParsed.reverse(sortMoviesArray("likes")); //sortiere die Liste moviesParsed aufsteigend
+  } else { //falls sort_direction nicht "down" ist
+    moviesParsed.sort(sortMoviesArray("likes")); //sortiere die Liste moviesParsed absteigend
   }
 
-  document.getElementById("movieTable").innerHTML = "";
+
+  //überschreibe den Inhalt von dem Element "movieTable" mit einem leeren Text = Inhalt LÖSCHEN
+  document.getElementById("movieTable").innerHTML = ""; 
+
+  // ------> bis Schleife gekommen -------------------------------------------------------------------------
   for (let [index, movie] of moviesParsed.entries()) {
     document.getElementById("movieTable").innerHTML += `
       <div class="col">
@@ -77,6 +81,6 @@ function drawMoviesTable(sort_direction) {
 }
 
 //Tabelle mit Filminformation bei Start abwärts sortiert erstellen
-drawMoviesTable(sort_direction);
+drawMoviesTable(sort_direction); //starte Funktion drawMoviesTable und übergebe Parameter sort_direction zb "down"
 //Event-Listener für Sortierung erstellen
 document.getElementById("btn-sort").addEventListener("click", sortMovies);
